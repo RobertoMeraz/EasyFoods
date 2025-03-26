@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pancakes de Plátano y Avena - Easy Foods</title>
+    <link rel="stylesheet" href="../estilos/estilo_recetas.css">
+    <style>
+        /* Estilos del encabezado */
+        .recipe-header {
+            text-align: center;
+            padding: 6rem 2rem 3rem;
+            background: linear-gradient(135deg, #fff9f9 0%, #ffffff 100%);
+            position: relative;
+            margin-bottom: 3rem;
+        }
+        
+        .recipe-header:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background-color: #ff6b6b;
+            border-radius: 2px;
+        }
+        
+        .site-title {
+            font-size: 1.2rem;
+            color: #888;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .recipe-main-title {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        .recipe-intro {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        /* Estilos de la imagen principal */
+        .recipe-hero-image {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            margin: 2rem auto;
+            display: block;
+            border: 1px solid #eee;
+        }
+        
+        /* Estilos de los metadatos */
+        .recipe-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 100px;
+        }
+        
+        .meta-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #ff6b6b;
+        }
+        
+        .meta-label {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 0.25rem;
+            text-transform: uppercase;
+        }
+        
+        .meta-value {
+            font-weight: 600;
+            color: #333;
+            font-size: 1.1rem;
+        }
+        
+        /* Estilos de los botones */
+        .add-plan-btn {
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(255, 107, 107, 0.2);
+            margin-top: 1rem;
+        }
+        
+        .add-plan-btn:hover {
+            background-color: #e05555;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(255, 107, 107, 0.3);
+        }
+        
+        .back-btn {
+            background-color: #f0f0f0;
+            color: #333;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+            margin-right: 1rem;
+            text-decoration: none;
+        }
+        
+        .back-btn:hover {
+            background-color: #e0e0e0;
+            transform: translateY(-2px);
+        }
+        
+        /* Estilos de la sección de ingredientes */
+        .ingredients-section {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        
+        .section-title {
+            color: black;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .section-title:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: black;
+        }
+        
+        .ingredients-list {
+            columns: 2;
+            column-gap: 2rem;
+            padding-left: 1.5rem;
+        }
+        
+        .ingredients-list li {
+            margin-bottom: 0.8rem;
+            break-inside: avoid;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .ingredients-list li:before {
+            color: #ff6b6b;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        /* Estilos de la sección de macros */
+        .macros-section {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        
+        .macros-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            text-align: center;
+        }
+        
+        .macro-item {
+            padding: 1.5rem 1rem;
+            background: #f9f9f9;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        
+        .macro-item:hover {
+            transform: translateY(-5px);
+            background: #fff5f5;
+        }
+        
+        .macro-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #333; /* Cambiado a negro */
+            margin-bottom: 0.5rem;
+        }
+        
+        .macro-label {
+            color: #666;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Estilos del botón de volver */
+        .back-button-container {
+            text-align: center;
+            margin: 2rem auto;
+            max-width: 800px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .recipe-main-title {
+                font-size: 2rem;
+            }
+            
+            .recipe-hero-image {
+                height: 300px;
+            }
+            
+            .macros-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .ingredients-list {
+                columns: 1;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .recipe-meta {
+                gap: 1rem;
+            }
+            
+            .macros-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="../main.html" class="logo">🌱 Easy Foods</a>
+            <ul class="nav-menu">
+                <li><a href="../main.html" class="nav-link">Inicio</a></li>
+                <li><a href="../recetas.html" class="nav-link">Recetas</a></li>
+                <li><a href="../sobre_nosotros.html" class="nav-link">Sobre Nosotros</a></li>
+                <li><a href="../login.html" class="nav-link">Únase a nosotros</a></li>
+                <li><a href="../contacto.html" class="nav-link highlight">Contáctenos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Recipe Header -->
+    <section class="recipe-header">
+        <div class="site-title">EASY FOODS</div>
+        <h1 class="recipe-main-title">Pancakes de Plátano y Avena</h1>
+        <p class="recipe-intro">Pancakes esponjosos y saludables, perfectos para empezar el día con energía. Una opción deliciosa sin azúcar añadido que combina la dulzura natural del plátano con los beneficios nutricionales de la avena.</p>
+        
+        <div class="recipe-meta">
+            <div class="meta-item">
+                <span class="meta-icon">⏱️</span>
+                <span class="meta-label">Tiempo</span>
+                <span class="meta-value">20 min</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-icon">🔥</span>
+                <span class="meta-label">Calorías</span>
+                <span class="meta-value">320 kcal</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-icon">🍽️</span>
+                <span class="meta-label">Porciones</span>
+                <span class="meta-value">4</span>
+            </div>
+        </div>
+        
+        <button class="add-plan-btn">
+            Añadir al plan semanal
+        </button>
+    </section>
+
+    <!-- Imagen principal -->
+    <img src="../imagenes/pancakes.jpg" alt="Pancakes de plátano y avena servidos con miel y frutas" class="recipe-hero-image">
+
+    <!-- Sección de ingredientes -->
+    <div class="ingredients-section">
+        <h2 class="section-title">Ingredientes</h2>
+        <ul class="ingredients-list">
+            <li>2 plátanos maduros</li>
+            <li>1 taza de avena molida</li>
+            <li>2 huevos</li>
+            <li>1/2 taza de leche (o leche vegetal)</li>
+            <li>1 cucharadita de canela</li>
+            <li>1 cucharadita de polvo para hornear</li>
+            <li>1 pizca de sal</li>
+            <li>1 cucharadita de extracto de vainilla (opcional)</li>
+            <li>Miel o jarabe de arce para servir</li>
+            <li>Fruta fresca para decorar</li>
+            <li>Nueces o almendras picadas (opcional)</li>
+            <li>Aceite de coco o mantequilla para cocinar</li>
+        </ul>
+    </div>
+
+    <!-- Sección de macros nutricionales -->
+    <div class="macros-section">
+        <h2 class="section-title">Información Nutricional</h2>
+        <div class="macros-grid">
+            <div class="macro-item">
+                <div class="macro-value">320</div>
+                <div class="macro-label">Calorías</div>
+            </div>
+            <div class="macro-item">
+                <div class="macro-value">12g</div>
+                <div class="macro-label">Proteínas</div>
+            </div>
+            <div class="macro-item">
+                <div class="macro-value">45g</div>
+                <div class="macro-label">Carbohidratos</div>
+            </div>
+            <div class="macro-item">
+                <div class="macro-value">10g</div>
+                <div class="macro-label">Grasas</div>
+            </div>
+            <div class="macro-item">
+                <div class="macro-value">5g</div>
+                <div class="macro-label">Fibra</div>
+            </div>
+            <div class="macro-item">
+                <div class="macro-value">18g</div>
+                <div class="macro-label">Azúcares</div>
+            </div>
+            <div class="macro-item">
+                <div class="macro-value">2g</div>
+                <div class="macro-label">Grasas saturadas</div>
+            </div>
+            <div class="macro-item">
+                <div class="macro-value">180mg</div>
+                <div class="macro-label">Sodio</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón de volver -->
+    <div class="back-button-container">
+        <a href="../recetas.html" class="back-btn">← Volver a Recetas</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sobre Nosotros</h3>
+                <p>Easy Foods te ayuda a preparar comidas deliciosas, saludables y accesibles para cada momento del día.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="../main.html">Inicio</a></li>
+                    <li><a href="../recetas.html">Recetas</a></li>
+                    <li><a href="../contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>info@easyfoods.com</p>
+                <p>+1 234 567 890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Easy Foods. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

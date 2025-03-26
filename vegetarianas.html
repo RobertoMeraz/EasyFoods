@@ -25,7 +25,7 @@
 
     <!-- Recipes Header -->
     <section class="recipes-header">
-        <h1>Explora Nuestras Recetas</h1>
+        <h1>Explora Nuestras Recetas Vegetarianas</h1>
         <div class="search-section">
             <input type="text" class="search-bar" placeholder="Buscar recetas...">
             <div class="filters">
@@ -34,14 +34,72 @@
                 <a href="almuerzos.html"><button class="filter-btn">Almuerzos</button></a>
                 <a href="cenas.html"><button class="filter-btn">Cenas</button></a>
                 <button class="filter-btn active">Vegetarianas</button>
-                <button class="filter-btn">Económicas</button>
+                <a href="rapidas.html"><button class="filter-btn">Rápidas</button></a>
             </div>
         </div>
     </section>
 
     <!-- Recipes Grid -->
     <main class="recipes-grid">
-        <!-- Recipe Card 1 -->
+        <!-- Desayunos -->
+        <article class="recipe-card">
+            <img src="/imagenes/bowl_avena.jpg" alt="Bowl de avena" class="recipe-image">
+            <div class="recipe-content">
+                <h2 class="recipe-title">Bowl de Avena con Frutas</h2>
+                <div class="recipe-meta">
+                    <span>15 min</span>
+                    <span>350 kcal por porción</span>
+                </div>
+                <p class="recipe-description">Un desayuno nutritivo y energético.</p>
+                <div class="ingredients">
+                    <h3>Ingredientes:</h3>
+                    <ul>
+                        <li>1 taza de avena</li>
+                        <li>2 tazas de leche o agua</li>
+                        <li>1 plátano</li>
+                        <li>1/2 taza de fresas</li>
+                        <li>1 cucharada de miel</li>
+                        <li>Almendras al gusto</li>
+                    </ul>
+                </div>
+                <div class="recipe-tags">
+                    <span class="tag">Desayuno</span>
+                    <span class="tag">Saludable</span>
+                    <span class="tag">Vegetariano</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Almuerzos -->
+        <article class="recipe-card">
+            <img src="/imagenes/ensalada_mediterranea.jpg" alt="Ensalada de Quinoa" class="recipe-image">
+            <div class="recipe-content">
+                <h2 class="recipe-title">Ensalada de Quinoa Mediterránea</h2>
+                <div class="recipe-meta">
+                    <span>25 min</span>
+                    <span>420 kcal por porción</span>
+                </div>
+                <p class="recipe-description">Una ensalada completa llena de proteínas y vegetales.</p>
+                <div class="ingredients">
+                    <h3>Ingredientes:</h3>
+                    <ul>
+                        <li>1 taza de quinoa</li>
+                        <li>2 tomates medianos</li>
+                        <li>1 pepino</li>
+                        <li>1/2 taza de aceitunas</li>
+                        <li>200g de queso feta</li>
+                        <li>Aceite de oliva</li>
+                        <li>Jugo de limón</li>
+                    </ul>
+                </div>
+                <div class="recipe-tags">
+                    <span class="tag">Almuerzo</span>
+                    <span class="tag">Vegetariano</span>
+                    <span class="tag">Saludable</span>
+                </div>
+            </div>
+        </article>
+
         <article class="recipe-card">
             <img src="/imagenes/curry_lentejas.jpg" alt="Curry de lentejas" class="recipe-image">
             <div class="recipe-content">
@@ -66,14 +124,14 @@
                     </ul>
                 </div>
                 <div class="recipe-tags">
-                    <span class="tag">Vegetariana</span>
+                    <span class="tag">Almuerzo</span>
                     <span class="tag">Proteínas</span>
                     <span class="tag">Comida reconfortante</span>
                 </div>
             </div>
         </article>
 
-        <!-- Recipe Card 2 -->
+        <!-- Cenas -->
         <article class="recipe-card">
             <img src="/imagenes/ratatui.jpeg" alt="Ratatouille" class="recipe-image">
             <div class="recipe-content">
@@ -97,18 +155,17 @@
                     </ul>
                 </div>
                 <div class="recipe-tags">
-                    <span class="tag">Vegetariana</span>
+                    <span class="tag">Cena</span>
                     <span class="tag">Vegetales</span>
                     <span class="tag">Sin gluten</span>
                 </div>
             </div>
         </article>
 
-        <!-- Recipe Card 3 -->
         <article class="recipe-card">
             <img src="/imagenes/quesadillas.jpeg" alt="Quesadillas de queso" class="recipe-image">
             <div class="recipe-content">
-                <h2 class="recipe-title">Quesadillas de Qeso con Champiñones</h2>
+                <h2 class="recipe-title">Quesadillas de Queso con Champiñones</h2>
                 <div class="recipe-meta">
                     <span>20 min</span>
                     <span>320 kcal por porción</span>
@@ -128,14 +185,44 @@
                     </ul>
                 </div>
                 <div class="recipe-tags">
-                    <span class="tag">Vegetariana</span>
+                    <span class="tag">Cena</span>
                     <span class="tag">Rápida</span>
                     <span class="tag">Mexicana</span>
                 </div>
             </div>
         </article>
 
-        <!-- Recipe Card 4 -->
+        <article class="recipe-card">
+            <img src="/imagenes/curry.jpg" alt="Curry de Garbanzos" class="recipe-image">
+            <div class="recipe-content">
+                <h2 class="recipe-title">Curry de Garbanzos con Espinacas</h2>
+                <div class="recipe-meta">
+                    <span>30 min</span>
+                    <span>380 kcal por porción</span>
+                </div>
+                <p class="recipe-description">Un plato vegetariano rico en proteínas y fibra.</p>
+                <div class="ingredients">
+                    <h3>Ingredientes:</h3>
+                    <ul>
+                        <li>2 latas de garbanzos</li>
+                        <li>300g de espinacas frescas</li>
+                        <li>1 lata de leche de coco</li>
+                        <li>1 cebolla</li>
+                        <li>3 dientes de ajo</li>
+                        <li>2 cucharadas de curry en polvo</li>
+                        <li>1 lata de tomate triturado</li>
+                        <li>Jengibre fresco</li>
+                    </ul>
+                </div>
+                <div class="recipe-tags">
+                    <span class="tag">Cena</span>
+                    <span class="tag">Vegetariano</span>
+                    <span class="tag">Económico</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Otras opciones -->
         <article class="recipe-card">
             <img src="/imagenes/quinoa.jpg" alt="Buddha bowl" class="recipe-image">
             <div class="recipe-content">
@@ -160,14 +247,13 @@
                     </ul>
                 </div>
                 <div class="recipe-tags">
-                    <span class="tag">Vegetariana</span>
+                    <span class="tag">Almuerzo/Cena</span>
                     <span class="tag">Completa</span>
                     <span class="tag">Meal prep</span>
                 </div>
             </div>
         </article>
 
-        <!-- Recipe Card 5 -->
         <article class="recipe-card">
             <img src="/imagenes/pesto.jpg" alt="Espagueti al pesto" class="recipe-image">
             <div class="recipe-content">
@@ -191,14 +277,13 @@
                     </ul>
                 </div>
                 <div class="recipe-tags">
-                    <span class="tag">Vegetariana</span>
+                    <span class="tag">Cena</span>
                     <span class="tag">Italiana</span>
                     <span class="tag">Gourmet</span>
                 </div>
             </div>
         </article>
 
-        <!-- Recipe Card 6 -->
         <article class="recipe-card">
             <img src="/imagenes/hummus.png" alt="Hummus con pan pita" class="recipe-image">
             <div class="recipe-content">
@@ -222,39 +307,13 @@
                     </ul>
                 </div>
                 <div class="recipe-tags">
-                    <span class="tag">Vegetariana</span>
                     <span class="tag">Aperitivo</span>
                     <span class="tag">Vegano</span>
+                    <span class="tag">Rápido</span>
                 </div>
             </div>
         </article>
     </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Sobre Nosotros</h3>
-                <p>Easy Foods te ayuda a preparar comidas deliciosas, saludables y accesibles para cada momento del día.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Enlaces Rápidos</h3>
-                <ul>
-                    <li><a href="main.html">Inicio</a></li>
-                    <li><a href="recetas.html">Recetas</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Contacto</h3>
-                <p>info@easyfoods.com</p>
-                <p>+1 234 567 890</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2023 Easy Foods. Todos los derechos reservados.</p>
-        </div>
-    </footer>
 </body>
 
 </html>
