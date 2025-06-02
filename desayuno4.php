@@ -4,42 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smoothie Verde Energético - Easy Foods</title>
+    <title>Parfait de Yogur y Granola - Easy Foods</title>
     <link rel="stylesheet" href="../estilos/estilo_recetas.css">
     <link rel="stylesheet" href="../estilos/estilo_detalle.css">
 </head>
 
 <body>
     <!-- Header -->
-    <header class="header">
-        <nav class="nav-container">
-            <a href="../main.html" class="logo">🌱 Easy Foods</a>
-            <ul class="nav-menu">
-                <li><a href="../main.html" class="nav-link">Inicio</a></li>
-                <li><a href="../recetas.html" class="nav-link">Recetas</a></li>
-                <li><a href="../sobre_nosotros.html" class="nav-link">Sobre Nosotros</a></li>
-                <li><a href="../login.html" class="nav-link">Únase a nosotros</a></li>
-                <li><a href="../contacto.html" class="nav-link highlight">Contáctenos</a></li>
-            </ul>
-        </nav>
-    </header>
+<?php include 'header.php'; ?>
 
     <!-- Recipe Header -->
     <section class="recipe-header">
         <div class="site-title">EASY FOODS</div>
-        <h1 class="recipe-main-title">Smoothie Verde Energético</h1>
-        <p class="recipe-intro">Bebida nutritiva llena de vitaminas y minerales, perfecta para cargar tu cuerpo de energía natural.</p>
+        <h1 class="recipe-main-title">Parfait de Yogur y Granola</h1>
+        <p class="recipe-intro">Un desayuno fresco y crujiente rico en probióticos, perfecto para comenzar el día con energía y salud intestinal.</p>
         
         <div class="recipe-meta">
             <div class="meta-item">
                 <span class="meta-icon">⏱️</span>
                 <span class="meta-label">Tiempo</span>
-                <span class="meta-value">10 min</span>
+                <span class="meta-value">15 min</span>
             </div>
             <div class="meta-item">
                 <span class="meta-icon">🔥</span>
                 <span class="meta-label">Calorías</span>
-                <span class="meta-value">250 kcal</span>
+                <span class="meta-value">380 kcal</span>
             </div>
             <div class="meta-item">
                 <span class="meta-icon">🍽️</span>
@@ -54,21 +43,21 @@
     </section>
 
     <!-- Imagen principal -->
-    <img src="../imagenes/licuado_verde.png" alt="Smoothie verde servido en un vaso con pajilla, decorado con semillas" class="recipe-hero-image">
+    <img src="../imagenes/parfait.jpg" alt="Parfait de yogur y granola en vaso transparente mostrando capas de ingredientes" class="recipe-hero-image">
 
     <!-- Sección de ingredientes -->
     <div class="ingredients-section">
         <h2 class="section-title">Ingredientes</h2>
         <ul class="ingredients-list">
-            <li>2 tazas de espinacas frescas</li>
-            <li>1 plátano maduro</li>
-            <li>1 manzana verde (sin semillas)</li>
-            <li>1 taza de piña fresca o congelada</li>
-            <li>1 cucharadita de jengibre fresco rallado</li>
-            <li>1 taza de agua de coco natural</li>
-            <li>1 cucharadita de semillas de chía</li>
-            <li>Hielo al gusto (opcional)</li>
-            <li>Miel o stevia para endulzar (opcional)</li>
+            <li>2 tazas de yogur griego natural</li>
+            <li>1/2 taza de granola casera (sin azúcar añadido)</li>
+            <li>1 taza de mezcla de frutos rojos (fresas, frambuesas, arándanos)</li>
+            <li>2 cucharadas de miel orgánica</li>
+            <li>1/4 taza de almendras fileteadas</li>
+            <li>1 cucharada de semillas de chía</li>
+            <li>2 cucharadas de coco rallado sin azúcar</li>
+            <li>Esencia de vainilla (opcional)</li>
+            <li>Canela en polvo para decorar</li>
         </ul>
     </div>
 
@@ -77,35 +66,35 @@
         <h2 class="section-title">Información Nutricional</h2>
         <div class="macros-grid">
             <div class="macro-item">
-                <div class="macro-value">250</div>
+                <div class="macro-value">380</div>
                 <div class="macro-label">Calorías</div>
             </div>
             <div class="macro-item">
-                <div class="macro-value">4g</div>
+                <div class="macro-value">18g</div>
                 <div class="macro-label">Proteínas</div>
             </div>
             <div class="macro-item">
-                <div class="macro-value">58g</div>
+                <div class="macro-value">45g</div>
                 <div class="macro-label">Carbohidratos</div>
             </div>
             <div class="macro-item">
-                <div class="macro-value">1g</div>
+                <div class="macro-value">16g</div>
                 <div class="macro-label">Grasas</div>
             </div>
             <div class="macro-item">
-                <div class="macro-value">8g</div>
+                <div class="macro-value">7g</div>
                 <div class="macro-label">Fibra</div>
             </div>
             <div class="macro-item">
-                <div class="macro-value">38g</div>
+                <div class="macro-value">28g</div>
                 <div class="macro-label">Azúcares</div>
             </div>
             <div class="macro-item">
-                <div class="macro-value">0.5g</div>
+                <div class="macro-value">4g</div>
                 <div class="macro-label">Grasas saturadas</div>
             </div>
             <div class="macro-item">
-                <div class="macro-value">120mg</div>
+                <div class="macro-value">85mg</div>
                 <div class="macro-label">Sodio</div>
             </div>
         </div>
@@ -113,7 +102,7 @@
 
     <!-- Botón de volver -->
     <div class="back-button-container">
-        <a href="../recetas.html" class="back-btn">← Volver a Recetas</a>
+        <a href="../recetas.php" class="back-btn">← Volver a Recetas</a>
     </div>
 
     <!-- Footer -->
@@ -126,9 +115,9 @@
             <div class="footer-section">
                 <h3>Enlaces Rápidos</h3>
                 <ul>
-                    <li><a href="../main.html">Inicio</a></li>
-                    <li><a href="../recetas.html">Recetas</a></li>
-                    <li><a href="../contacto.html">Contacto</a></li>
+                    <li><a href="../main.php">Inicio</a></li>
+                    <li><a href="../recetas.php">Recetas</a></li>
+                    <li><a href="../contacto.php">Contacto</a></li>
                 </ul>
             </div>
             <div class="footer-section">

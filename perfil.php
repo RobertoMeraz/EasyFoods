@@ -49,6 +49,7 @@ $base_url = '/'; // Ajusta esto según tu estructura de directorios
     
     <!-- Favicon -->
     <link rel="icon" href="<?php echo $base_url; ?>assets/img/favicon.ico" type="image/x-icon">
+    
 </head>
 <body>
     <?php 

@@ -10,31 +10,19 @@
 
 <body>
     <!-- Header -->
-    <header class="header">
-        <nav class="nav-container">
-            <a href="main.html" class="logo">🌱 Easy Foods</a>
-            <ul class="nav-menu">
-                <li><a href="main.html" class="nav-link">Inicio</a></li>
-                <li><a href="recetas.html" class="nav-link">Recetas</a></li>
-                <li><a href="sobre_nosotros.html" class="nav-link">Sobre Nosotros</a></li>
-                <li><a href="login.html" class="nav-link">Únase a nosotros</a></li>
-                <li><a href="contacto.html" class="nav-link highlight">Contáctenos</a></li>
-            </ul>
-        </nav>
-    </header>
-
+<?php include 'header.php'; ?>
     <!-- Recipes Header -->
     <section class="recipes-header">
         <h1>Explora Nuestras Recetas</h1>
         <div class="search-section">
             <input type="text" class="search-bar" placeholder="Buscar recetas...">
             <div class="filters">
-                <a href="recetas.html"><button class="filter-btn">Todas</button></a>
+                <a href="recetas.php"><button class="filter-btn">Todas</button></a>
                 <button class="filter-btn active">Desayunos</button>
-                <a href="almuerzos.html"><button class="filter-btn">Almuerzos</button></a>
-                <a href="cenas.html"><button class="filter-btn">Cenas</button></a>
-                <a href="vegetarianas.html"><button class="filter-btn">Vegetarianas</button></a>
-                <a href="rapidas.html"><button class="filter-btn">Rápidas</button></a>
+                <a href="almuerzos.php"><button class="filter-btn">Almuerzos</button></a>
+                <a href="cenas.php"><button class="filter-btn">Cenas</button></a>
+                <a href="vegetarianas.php"><button class="filter-btn">Vegetarianas</button></a>
+                <a href="rapidas.php"><button class="filter-btn">Rápidas</button></a>
             </div>
         </div>
     </section>
@@ -43,7 +31,7 @@
     <main class="recipes-grid">
         <!-- Recipe Card 1 -->
         <article class="recipe-card">
-            <a href="/desayunos/desayuno1.html"><img src="/imagenes/pancakes.jpg" alt="Pancakes de Plátano" class="recipe-image"></a>
+            <a href="desayuno1.php"><img src="/imagenes/pancakes.jpg" alt="Pancakes de Plátano" class="recipe-image"></a>
             <div class="recipe-content">
                 <h2 class="recipe-title">Pancakes de Plátano y Avena</h2>
                 <div class="recipe-meta">
@@ -73,7 +61,7 @@
 
         <!-- Recipe Card 2 -->
         <article class="recipe-card">
-            <a href="/desayunos/desayuno2.html"><img src="/imagenes/huevos_rancheros.jpg" alt="Huevos Rancheros" class="recipe-image"></a>
+            <a href="desayuno2.php"><img src="/imagenes/huevos_rancheros.jpg" alt="Huevos Rancheros" class="recipe-image"></a>
             <div class="recipe-content">
                 <h2 class="recipe-title">Huevos Rancheros Mexicanos</h2>
                 <div class="recipe-meta">
@@ -104,7 +92,7 @@
 
         <!-- Recipe Card 3 -->
         <article class="recipe-card">
-            <a href="desayunos/desayuno3.html"><img src="/imagenes/licuado_verde.png" alt="Smoothie Verde" class="recipe-image"></a>
+            <a href="desayuno3.php"><img src="/imagenes/licuado_verde.png" alt="Smoothie Verde" class="recipe-image"></a>
             <div class="recipe-content">
                 <h2 class="recipe-title">Smoothie Verde Energético</h2>
                 <div class="recipe-meta">
@@ -134,7 +122,7 @@
 
         <!-- Recipe Card 4 -->
         <article class="recipe-card">
-            <a href="desayunos/desayuno4.html"><img src="/imagenes/parfait.jpg" alt="Parfait de Yogur" class="recipe-image"></a>
+            <a href="desayuno4.php"><img src="/imagenes/parfait.jpg" alt="Parfait de Yogur" class="recipe-image"></a>
             <div class="recipe-content">
                 <h2 class="recipe-title">Parfait de Yogur y Granola</h2>
                 <div class="recipe-meta">
@@ -164,7 +152,7 @@
 
         <!-- Recipe Card 5 -->
         <article class="recipe-card">
-            <a href="desayunos/desayuno5.html"><img src="/imagenes/tostadas_huevo.jpg" alt="Tostadas de Aguacate" class="recipe-image"></a>
+            <a href="desayuno5.php"><img src="/imagenes/tostadas_huevo.jpg" alt="Tostadas de Aguacate" class="recipe-image"></a>
             <div class="recipe-content">
                 <h2 class="recipe-title">Tostadas de Aguacate y Huevo</h2>
                 <div class="recipe-meta">
@@ -195,7 +183,7 @@
 
         <!-- Recipe Card 6 -->
         <article class="recipe-card">
-            <a href="desayunos/desayuno6.html"><img src="/imagenes/burrito_proteico.jpg" alt="Burrito de Desayuno" class="recipe-image"></a>
+            <a href="desayuno6.php"><img src="/imagenes/burrito_proteico.jpg" alt="Burrito de Desayuno" class="recipe-image"></a>
             <div class="recipe-content">
                 <h2 class="recipe-title">Burrito de Desayuno Proteico</h2>
                 <div class="recipe-meta">
@@ -225,7 +213,7 @@
         </article>
 
         <article class="recipe-card">
-            <a href="desayunos/desayuno7.html"><img src="/imagenes/bowl_avena.jpg" alt="Bowl de avena" class="recipe-image"></a>
+            <a href="desayuno7.php"><img src="/imagenes/bowl_avena.jpg" alt="Bowl de avena" class="recipe-image"></a>
             <div class="recipe-content">
                 <h2 class="recipe-title">Bowl de Avena con Frutas</h2>
                 <div class="recipe-meta">

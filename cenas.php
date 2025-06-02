@@ -10,31 +10,19 @@
 
 <body>
     <!-- Header -->
-    <header class="header">
-        <nav class="nav-container">
-            <a href="main.html" class="logo">🌱 Easy Foods</a>
-            <ul class="nav-menu">
-                <li><a href="main.html" class="nav-link">Inicio</a></li>
-                <li><a href="recetas.html" class="nav-link">Recetas</a></li>
-                <li><a href="sobre_nosotros.html" class="nav-link">Sobre Nosotros</a></li>
-                <li><a href="login.html" class="nav-link">Únase a nosotros</a></li>
-                <li><a href="contacto.html" class="nav-link highlight">Contáctenos</a></li>
-            </ul>
-        </nav>
-    </header>
-
+<?php include 'header.php'; ?>  
     <!-- Recipes Header -->
     <section class="recipes-header">
         <h1>Explora Nuestras Recetas</h1>
         <div class="search-section">
             <input type="text" class="search-bar" placeholder="Buscar recetas...">
             <div class="filters">
-                <a href="recetas.html"><button class="filter-btn">Todas</button></a>
-                <a href="desayunos.html"><button class="filter-btn">Desayunos</button></a>
-                <a href="almuerzos.html"><button class="filter-btn">Almuerzos</button></a>
+                <a href="recetas.php"><button class="filter-btn">Todas</button></a>
+                <a href="desayunos.php"><button class="filter-btn">Desayunos</button></a>
+                <a href="almuerzos.php"><button class="filter-btn">Almuerzos</button></a>
                 <button class="filter-btn active">Cenas</button>
-                <a href="vegetarianas.html"><button class="filter-btn">Vegetarianas</button></a>
-                <a href="rapidas.html"><button class="filter-btn">Rápidas</button></a>
+                <a href="vegetarianas.php"><button class="filter-btn">Vegetarianas</button></a>
+                <a href="rapidas.php"><button class="filter-btn">Rápidas</button></a>
             </div>
         </div>
     </section>

@@ -8,19 +8,7 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <nav class="nav-container">
-            <a href="/" class="logo">🌱 Easy Foods</a>
-            <ul class="nav-menu">
-                <li><a href="main.html" class="nav-link">Inicio</a></li>
-                <li><a href="recetas.html" class="nav-link">Recetas</a></li>
-                <li><a href="sobre_nosotros.html" class="nav-link">Sobre Nosotros</a></li>
-                <li><a href="login.html" class="nav-link">Únase a nosotros</a></li>
-                <li><a href="contacto.html" class="nav-link highlight">Contáctenos</a></li>
-            </ul>
-        </nav>
-    </header>
-
+<?php include 'header.php'; ?>
     <!-- About Hero -->
     <section class="about-hero">
         <h1>Sobre Easy Foods</h1>
@@ -113,9 +101,9 @@
             <div class="footer-section">
                 <h3>Enlaces Rápidos</h3>
                 <ul>
-                    <li><a href="recetas.html">Recetas</a></li>
-                    <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="recetas.php">Recetas</a></li>
+                    <li><a href="sobre_nosotros.php">Sobre Nosotros</a></li>
+                    <li><a href="contacto.php">Contacto</a></li>
                 </ul>
             </div>
             <div class="footer-section">

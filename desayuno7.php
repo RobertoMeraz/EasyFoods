@@ -4,42 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Huevos Rancheros Mexicanos - Easy Foods</title>
+    <title>Bowl de Avena con Frutas - Easy Foods</title>
     <link rel="stylesheet" href="../estilos/estilo_recetas.css">
     <link rel="stylesheet" href="../estilos/estilo_detalle.css">
 </head>
 
 <body>
     <!-- Header -->
-    <header class="header">
-        <nav class="nav-container">
-            <a href="../main.html" class="logo">🌱 Easy Foods</a>
-            <ul class="nav-menu">
-                <li><a href="../main.html" class="nav-link">Inicio</a></li>
-                <li><a href="../recetas.html" class="nav-link">Recetas</a></li>
-                <li><a href="../sobre_nosotros.html" class="nav-link">Sobre Nosotros</a></li>
-                <li><a href="../login.html" class="nav-link">Únase a nosotros</a></li>
-                <li><a href="../contacto.html" class="nav-link highlight">Contáctenos</a></li>
-            </ul>
-        </nav>
-    </header>
+    <?php include 'header.php'; ?>
 
     <!-- Recipe Header -->
     <section class="recipe-header">
         <div class="site-title">EASY FOODS</div>
-        <h1 class="recipe-main-title">Huevos Rancheros Mexicanos</h1>
-        <p class="recipe-intro">Un desayuno mexicano tradicional lleno de sabor y proteínas, perfecto para empezar el día con energía auténtica.</p>
+        <h1 class="recipe-main-title">Bowl de Avena con Frutas</h1>
+        <p class="recipe-intro">Un desayuno nutritivo y energético que combina la fibra de la avena con la frescura de las frutas, ideal para comenzar el día con vitalidad.</p>
         
         <div class="recipe-meta">
             <div class="meta-item">
                 <span class="meta-icon">⏱️</span>
                 <span class="meta-label">Tiempo</span>
-                <span class="meta-value">25 min</span>
+                <span class="meta-value">15 min</span>
             </div>
             <div class="meta-item">
                 <span class="meta-icon">🔥</span>
                 <span class="meta-label">Calorías</span>
-                <span class="meta-value">450 kcal</span>
+                <span class="meta-value">350 kcal</span>
             </div>
             <div class="meta-item">
                 <span class="meta-icon">🍽️</span>
@@ -54,23 +43,21 @@
     </section>
 
     <!-- Imagen principal -->
-    <img src="../imagenes/huevos_rancheros.jpg" alt="Huevos Rancheros servidos con salsa, frijoles y aguacate" class="recipe-hero-image">
+    <img src="../imagenes/bowl_avena.jpg" alt="Bowl de avena decorado con frutas frescas y almendras" class="recipe-hero-image">
 
     <!-- Sección de ingredientes -->
     <div class="ingredients-section">
         <h2 class="section-title">Ingredientes</h2>
         <ul class="ingredients-list">
-            <li>4 huevos</li>
-            <li>4 tortillas de maíz</li>
-            <li>2 tomates maduros</li>
-            <li>1 cebolla mediana</li>
-            <li>2 chiles verdes (jalapeños o serranos)</li>
-            <li>1 taza de frijoles refritos</li>
-            <li>1 aguacate en rodajas</li>
-            <li>1/4 taza de queso fresco rallado</li>
-            <li>2 cucharadas de aceite vegetal</li>
-            <li>Sal y pimienta al gusto</li>
-            <li>Cilantro fresco para decorar</li>
+            <li>1 taza de avena en hojuelas</li>
+            <li>2 tazas de leche (entera, vegetal o agua)</li>
+            <li>1 plátano maduro en rodajas</li>
+            <li>1/2 taza de fresas frescas lavadas y cortadas</li>
+            <li>1 cucharada de miel orgánica</li>
+            <li>2 cucharadas de almendras fileteadas</li>
+            <li>1 cucharadita de canela en polvo</li>
+            <li>1 cucharadita de esencia de vainilla (opcional)</li>
+            <li>1 cucharada de semillas de chía (opcional)</li>
         </ul>
     </div>
 
@@ -79,44 +66,43 @@
         <h2 class="section-title">Información Nutricional</h2>
         <div class="macros-grid">
             <div class="macro-item">
-                <div class="macro-value">450</div>
+                <div class="macro-value">350</div>
                 <div class="macro-label">Calorías</div>
             </div>
             <div class="macro-item">
-                <div class="macro-value">22g</div>
+                <div class="macro-value">12g</div>
                 <div class="macro-label">Proteínas</div>
             </div>
             <div class="macro-item">
-                <div class="macro-value">35g</div>
+                <div class="macro-value">58g</div>
                 <div class="macro-label">Carbohidratos</div>
             </div>
             <div class="macro-item">
-                <div class="macro-value">25g</div>
+                <div class="macro-value">8g</div>
                 <div class="macro-label">Grasas</div>
             </div>
             <div class="macro-item">
-                <div class="macro-value">8g</div>
+                <div class="macro-value">10g</div>
                 <div class="macro-label">Fibra</div>
             </div>
             <div class="macro-item">
-                <div class="macro-value">4g</div>
+                <div class="macro-value">22g</div>
                 <div class="macro-label">Azúcares</div>
             </div>
             <div class="macro-item">
-                <div class="macro-value">5g</div>
+                <div class="macro-value">1.5g</div>
                 <div class="macro-label">Grasas saturadas</div>
             </div>
             <div class="macro-item">
-                <div class="macro-value">620mg</div>
+                <div class="macro-value">120mg</div>
                 <div class="macro-label">Sodio</div>
             </div>
         </div>
     </div>
 
-
     <!-- Botón de volver -->
     <div class="back-button-container">
-        <a href="../recetas.html" class="back-btn">← Volver a Recetas</a>
+        <a href="../recetas.php" class="back-btn">← Volver a Recetas</a>
     </div>
 
     <!-- Footer -->
@@ -129,9 +115,9 @@
             <div class="footer-section">
                 <h3>Enlaces Rápidos</h3>
                 <ul>
-                    <li><a href="../main.html">Inicio</a></li>
-                    <li><a href="../recetas.html">Recetas</a></li>
-                    <li><a href="../contacto.html">Contacto</a></li>
+                    <li><a href="../main.php">Inicio</a></li>
+                    <li><a href="../recetas.php">Recetas</a></li>
+                    <li><a href="../contacto.php">Contacto</a></li>
                 </ul>
             </div>
             <div class="footer-section">

@@ -1,6 +1,7 @@
 <?php
 // includes/footer.php
 ?>
+<link rel="stylesheet" href="estilos/footer.css">
 <footer class="footer">
     <div class="footer-container">
         <!-- Sección 1: Logo y descripción -->

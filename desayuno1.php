@@ -11,18 +11,7 @@
 
 <body>
     <!-- Header -->
-    <header class="header">
-        <nav class="nav-container">
-            <a href="../main.html" class="logo">🌱 Easy Foods</a>
-            <ul class="nav-menu">
-                <li><a href="../main.html" class="nav-link">Inicio</a></li>
-                <li><a href="../recetas.html" class="nav-link">Recetas</a></li>
-                <li><a href="../sobre_nosotros.html" class="nav-link">Sobre Nosotros</a></li>
-                <li><a href="../login.html" class="nav-link">Únase a nosotros</a></li>
-                <li><a href="../contacto.html" class="nav-link highlight">Contáctenos</a></li>
-            </ul>
-        </nav>
-    </header>
+<?php include '/xampp/htdocs/easy foods/header.php'; ?>
 
     <!-- Recipe Header -->
     <section class="recipe-header">
@@ -116,7 +105,7 @@
 
     <!-- Botón de volver -->
     <div class="back-button-container">
-        <a href="../recetas.html" class="back-btn">← Volver a Recetas</a>
+        <a href="../recetas.php" class="back-btn">← Volver a Recetas</a>
     </div>
 
     <!-- Footer -->
@@ -129,9 +118,9 @@
             <div class="footer-section">
                 <h3>Enlaces Rápidos</h3>
                 <ul>
-                    <li><a href="../main.html">Inicio</a></li>
-                    <li><a href="../recetas.html">Recetas</a></li>
-                    <li><a href="../contacto.html">Contacto</a></li>
+                    <li><a href="../main.php">Inicio</a></li>
+                    <li><a href="../recetas.php">Recetas</a></li>
+                    <li><a href="../contacto.php">Contacto</a></li>
                 </ul>
             </div>
             <div class="footer-section">

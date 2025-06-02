@@ -1,0 +1,142 @@
+/* Reset básico para elementos del header */
+.header * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estructura principal del header */
+.header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Contenedor de navegación */
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4a9f45;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Menú de navegación */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+/* Enlaces de navegación */
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #4a9f45;
+}
+
+/* Efecto subrayado al pasar el mouse */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #4a9f45;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Botón destacado */
+.nav-link.highlight {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-link.highlight:hover {
+    background-color: #e05555;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav-link.highlight::after {
+    display: none;
+}
+
+/* Menú hamburguesa para móviles */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 2rem;
+        gap: 1.5rem;
+        transition: left 0.3s ease;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-link {
+        font-size: 1.1rem;
+    }
+
+    .nav-link.highlight {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* Espacio para evitar que el header cubra contenido */
+body {
+    padding-top: 70px;
+}
