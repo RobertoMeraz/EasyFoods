@@ -195,5 +195,69 @@ function getEtiquetasByReceta($receta_id) {
         return [];
     }
 }
+
+/**
+ * Añade una receta a la lista de favoritos de un usuario.
+ *
+ * @param int $usuario_id ID del usuario.
+ * @param int $receta_id ID de la receta.
+ * @return bool|string True si se añadió correctamente, "already_exists" si ya era favorita, false en caso de error.
+ */
+function addRecetaToFavoritos($usuario_id, $receta_id) {
+    global $conn; // Asume que $conn es tu objeto PDO de conexión global
+
+    // 0. Validaciones básicas de entrada (robustez adicional)
+    if (!$conn) {
+        error_log("addRecetaToFavoritos: Conexión a la base de datos no disponible (\$conn es nulo).");
+        return false;
+    }
+    if (!filter_var($usuario_id, FILTER_VALIDATE_INT) || $usuario_id <= 0) {
+        error_log("addRecetaToFavoritos: ID de usuario no válido proporcionado: " . htmlspecialchars(print_r($usuario_id, true)));
+        return false;
+    }
+    if (!filter_var($receta_id, FILTER_VALIDATE_INT) || $receta_id <= 0) {
+        error_log("addRecetaToFavoritos: ID de receta no válido proporcionado: " . htmlspecialchars(print_r($receta_id, true)));
+        return false;
+    }
+
+    try {
+        // 1. Verificar si la receta ya está en favoritos para este usuario
+        // CORRECCIÓN AQUÍ: Seleccionar una columna existente como 'usuario_id' o simplemente '1'
+        $stmt_check = $conn->prepare("SELECT usuario_id FROM favoritos WHERE usuario_id = :usuario_id AND receta_id = :receta_id");
+        // Alternativamente, podrías usar: "SELECT 1 FROM favoritos WHERE ..."
+        
+        $stmt_check->bindParam(':usuario_id', $usuario_id, PDO::PARAM_INT);
+        $stmt_check->bindParam(':receta_id', $receta_id, PDO::PARAM_INT);
+        $stmt_check->execute();
+
+        if ($stmt_check->fetch()) {
+            return "already_exists"; // La receta ya es un favorito
+        }
+
+        // 2. Si no existe, intentar insertarla en la tabla 'favoritos'
+        $sql_insert = "INSERT INTO favoritos (usuario_id, receta_id, fecha_agregado) VALUES (:usuario_id, :receta_id, NOW())";
+        $stmt_insert = $conn->prepare($sql_insert);
+
+        // Vincular parámetros
+        $stmt_insert->bindParam(':usuario_id', $usuario_id, PDO::PARAM_INT);
+        $stmt_insert->bindParam(':receta_id', $receta_id, PDO::PARAM_INT);
+
+        if ($stmt_insert->execute()) {
+            return true; // Éxito al insertar
+        } else {
+            $errorInfo = $stmt_insert->errorInfo();
+            error_log("Error en addRecetaToFavoritos (execute devolvió false). SQLSTATE: {$errorInfo[0]}, Driver Code: {$errorInfo[1]}, Message: {$errorInfo[2]}. Usuario ID: $usuario_id, Receta ID: $receta_id");
+            return false; 
+        }
+
+    } catch (PDOException $e) {
+        $debug_sql_check = "SELECT usuario_id FROM favoritos WHERE usuario_id = $usuario_id AND receta_id = $receta_id"; // Para el log
+        $debug_sql_insert = "INSERT INTO favoritos (usuario_id, receta_id, fecha_agregado) VALUES ($usuario_id, $receta_id, NOW())"; // Para el log
+        
+        error_log("PDOException en addRecetaToFavoritos: " . $e->getMessage() . " | SQL Check aprox: [$debug_sql_check] | SQL Insert aprox: [$debug_sql_insert] | Usuario ID: $usuario_id | Receta ID: $receta_id");
+        return false; 
+    }
+}
+
 ?>
 

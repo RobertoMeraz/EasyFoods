@@ -157,6 +157,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <div class="admin-container">
+        <?php include 'header.php'; ?>
         <!-- Sidebar -->
         <?php include 'admin_sidebar.php'; ?>
 

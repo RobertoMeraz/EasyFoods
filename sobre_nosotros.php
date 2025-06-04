@@ -74,14 +74,14 @@
                     </div>
                 </div>
                 <div class="team-member">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Miembro del equipo" class="member-image">
+                    <img src="/imagenes/wicho.jpg" alt="Miembro del equipo" class="member-image">
                     <div class="member-info">
                         <h3>Luis Fernando Ochoa Angulo</h3>
                         <p>Desarrollador</p>
                     </div>
                 </div>
                 <div class="team-member">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Miembro del equipo" class="member-image">
+                    <img src="/imagenes/facu.jpg" alt="Miembro del equipo" class="member-image">
                     <div class="member-info">
                         <h3>Facundo Jose Racca</h3>
                         <p>Analista</p>
