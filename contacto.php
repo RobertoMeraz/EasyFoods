@@ -86,31 +86,6 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Easy Foods</h3>
-                <p>Haciendo la cocina fácil y accesible para todos.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Enlaces Rápidos</h3>
-                <ul>
-                    <li><a href="recetas.php">Recetas</a></li>
-                    <li><a href="sobre_nosotros.php">Sobre Nosotros</a></li>
-                    <li><a href="contacto.php">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Síguenos</h3>
-                <div class="social-links">
-                    <a href="#" class="social-link">Twitter</a>
-                    <a href="#" class="social-link">LinkedIn</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Easy Foods. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+ <?php include 'footer.php'; ?>
 </body>
 </html>
